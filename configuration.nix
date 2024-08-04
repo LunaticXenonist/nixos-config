@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -21,14 +21,14 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Set channel to unstable
-  system.autoUpgrade = {
-  	enable = true;
-	channel = "https://nixos.org/channels/nixos-unstable";
-	};
 
-  # flakes setup
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  # flakes setup and cachix
+  nix.settings = {
+  	experimental-features = [ "nix-command" "flakes"];
+	substituters = [ "https://hyprland.cachix.org"];
+	trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  };
+
 
 
   # Enable networking
@@ -77,6 +77,11 @@
      wget
      curl
   ];
+
+  programs.hyprland = {
+  	enable = true;
+	package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+  };
 
   environment.variables.EDITOR = "vim";
 

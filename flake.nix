@@ -9,10 +9,16 @@
 	inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprland = {
+    	url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+	inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = { self, nixpkgs, home-manager, ...}@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    	specialArgs = { inherit inputs; };
     	system = "x86_64-linux";
 	modules = [
 		./configuration.nix

@@ -55,7 +55,6 @@
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
-    variant = "";
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -84,6 +83,45 @@
   };
 
   environment.variables.EDITOR = "vim";
+  services.flatpak.enable = true;
+
+  # Audio
+  security.rtkit.enable = true;
+  services.pipewire = {
+  	enable = true;
+	alsa.enable = true;
+	alsa.support32Bit = true;
+	pulse.enable = true;
+	jack.enable = true;
+  };
+
+
+  # Desktop Portals
+  xdg.portal = {
+  	enable = true;
+	extraPortals = with pkgs; [xdg-desktop-portal-gtk];
+	config.common.default = "gtk";
+  };
+
+
+  # Polkit
+  security.polkit.enable = true;
+  systemd =  {
+  	user.services.polkit-gnome-authentication-agent-1 = {
+		description = "polkit-gnome-authentication-agent";
+		wants = ["graphical-session.target"];
+		wantedBy = ["graphical-session.target"];
+		after = ["graphical-session.target"];
+		serviceConfig = {
+			type = "simple";
+			ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+			Restart = "on-failure";
+			RestartSec = 1;
+			TimeoutStopSec = 10;
+		};
+	};
+  };
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

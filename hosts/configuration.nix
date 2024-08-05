@@ -14,25 +14,28 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-
-  # flakes setup and cachix
-  nix.settings = {
-  	experimental-features = [ "nix-command" "flakes"];
-	substituters = [ "https://hyprland.cachix.org"];
-	trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  networking = {
+  	hostName = "nixos";
+  	wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+	networkmanager.enable = true;
   };
 
 
+  # Package Manager configuration
+  nix = {
+  	settings = {
+  		auto-optimise-store = true;
+		experimental-features = [ "nix-command" "flakes"];
+		substituters = [ "https://hyprland.cachix.org"];
+		trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+	};
+	gc = {
+		automatic = true;
+		dates = "weekly";
+		options = "--delete-older-than-7d";
+	};
+  };
 
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -65,25 +68,23 @@
     packages = with pkgs; [];
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-     neovim
-     git
-     wget
-     curl
-  ];
-
-  programs.hyprland = {
-  	enable = true;
-	package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+  environment = {
+  	systemPackages = with pkgs; [
+		neovim
+     		git
+     		wget
+     		curl
+  	];
+	variables = {
+		EDITOR = "nvim";
+		VISUAL = "nvim";
+	};
   };
 
-  environment.variables.EDITOR = "vim";
+
   services.flatpak.enable = true;
+  services.udisks2.enable = true;
+
 
   # Audio
   security.rtkit.enable = true;
@@ -103,6 +104,12 @@
 	config.common.default = "gtk";
   };
 
+
+
+  services.dbus = {
+  	implementation = "broker";
+	packages = with pkgs; [gcr];
+  };
 
   # Polkit
   security.polkit.enable = true;

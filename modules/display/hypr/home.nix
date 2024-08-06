@@ -3,6 +3,7 @@
 		./waybar/home.nix
 		./wofi/home.nix
 		./hyprland/config.nix
+		./mako/home.nix
 	];
 
 	home.packages = with pkgs; [

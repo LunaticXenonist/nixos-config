@@ -61,7 +61,10 @@
     isNormalUser = true;
     description = "Cole Gibbs";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [
+	discord
+	firefox
+    ];
   };
 
   environment = {

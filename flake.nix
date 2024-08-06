@@ -14,6 +14,11 @@
 	inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprnix =  {
+    	url = "github:hyprland-community/hyprnix";
+	inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = {...}@inputs: let 

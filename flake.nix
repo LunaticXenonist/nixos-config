@@ -16,18 +16,16 @@
 
   };
 
-  outputs = {...}@inputs: {
-	let 
+  outputs = {...}@inputs: let 
    		lib = inputs.nixpkgs.lib;
 		user = "cole";
-		sysPkgs = input.nixpkgs {
-			inherit system;
+		sysPkgs = inputs.nixpkgs {
+			system = "x86_64-linux";
 			config.allowUnfree = true;
 		};
   	in { 
 		nixosConfigurations = import ./hosts/default.nix {
-			inherit lib, user, inputs, sysPkgs;
+			inherit lib user inputs sysPkgs;
     		};
   	};
-  };
 }

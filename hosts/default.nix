@@ -15,11 +15,12 @@
 		home-manager.useGlobalPkgs = true;
 		home-manager.useUserPkgs = true;
 		home-manager.extraSpecialArgs = {
-			inherit user, inputs, host; };
+			inherit user inputs host; };
 		home-manager.users.${user} = {
 			imports = findHomeModules modules
 			++ lib.optional (builtins.pathExists ./${host}/home.nix) ./${host}/home.nix;
 		};
+	};
 
 	mkHost = {
 		host, 
@@ -29,7 +30,7 @@
 		lib.nixosSystem {
 			pkgs = sysPkgs;
 			specialArgs = {
-				inherit user, inputs, host;
+				inherit user inputs host;
 			};
 			modules = 
 				findSysModules modules 
@@ -39,13 +40,14 @@
 					(mkHM host modules)
 				];
 		};
+
 	moduleSets = {
 		personal = {
 			modules = [
 			../modules/gaming
 			../modules/home-manager
-			../modules/display
-			]:
+			../modules/display/hypr
+			];
 		};
 	};
   in {

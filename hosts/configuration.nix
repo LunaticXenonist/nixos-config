@@ -12,7 +12,7 @@
 
   networking = {
   	hostName = "nixos";
-  	wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  	#wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 	networkmanager.enable = true;
   };
 

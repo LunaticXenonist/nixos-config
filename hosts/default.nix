@@ -13,7 +13,7 @@
 
 	mkHM = host: modules: {
 		home-manager.useGlobalPkgs = true;
-		home-manager.useUserPkgs = true;
+		home-manager.useUserPackages = true;
 		home-manager.extraSpecialArgs = {
 			inherit user inputs host; };
 		home-manager.users.${user} = {
@@ -28,7 +28,7 @@
 		modules ? [],
 	}:
 		lib.nixosSystem {
-			pkgs = sysPkgs;
+			pkgs = sysPkgs.${system};
 			specialArgs = {
 				inherit user inputs host;
 			};

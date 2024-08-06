@@ -19,10 +19,14 @@
   outputs = {...}@inputs: let 
    		lib = inputs.nixpkgs.lib;
 		user = "cole";
-		sysPkgs = inputs.nixpkgs {
-			system = "x86_64-linux";
+		systems = ["x86_64-linux"];
+		eachSystem = lib.genAttrs systems;
+		sysPkgs = eachSystem (system: 
+			import inputs.nixpkgs {
+			inherit system;
 			config.allowUnfree = true;
-		};
+		});
+
   	in { 
 		nixosConfigurations = import ./hosts/default.nix {
 			inherit lib user inputs sysPkgs;

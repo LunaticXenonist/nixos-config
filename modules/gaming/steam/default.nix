@@ -3,7 +3,7 @@
 		enable = true;
 		extest.enable = true;
 
-		dedicatdServer.openFirewall = true;
+		dedicatedServer.openFirewall = true;
 		localNetworkGameTransfers.openFirewall = true;
 		remotePlay.openFirewall = true;
 		

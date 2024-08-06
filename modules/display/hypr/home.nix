@@ -6,6 +6,8 @@
 	];
 
 	home.packages = with pkgs; [
+		firefox
+		kitty
 		copyq
 		wl-clipboard
 		wlr-randr

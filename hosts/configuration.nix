@@ -2,36 +2,29 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ pkgs, user, inputs, host, ... }:
 
 {
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking = {
-  	hostName = "nixos";
-  	wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-	networkmanager.enable = true;
+  	hostName = host;
+       # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   };
 
-
-  # Package Manager configuration
+  # Package manager configuration
   nix = {
   	settings = {
-  		auto-optimise-store = true;
-		experimental-features = [ "nix-command" "flakes"];
-		substituters = [ "https://hyprland.cachix.org"];
-		trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-	};
-	gc = {
-		automatic = true;
-		dates = "weekly";
-		options = "--delete-older-than-7d";
-	};
+  		experimental-features = [ "nix-command" "flakes"];
+  	};
   };
 
+
+
+  # Enable networking
+  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -64,23 +57,25 @@
     packages = with pkgs; [];
   };
 
-  environment = {
-  	systemPackages = with pkgs; [
-		neovim
-     		git
-     		wget
-     		curl
-  	];
-	variables = {
-		EDITOR = "nvim";
-		VISUAL = "nvim";
-	};
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
+  environment.systemPackages = with pkgs; [
+     neovim
+     git
+     wget
+     curl
+  ];
+
+  programs.hyprland = {
+  	enable = true;
+	package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
   };
 
-
+  environment.variables.EDITOR = "vim";
   services.flatpak.enable = true;
-  services.udisks2.enable = true;
-
 
   # Audio
   security.rtkit.enable = true;
@@ -100,12 +95,6 @@
 	config.common.default = "gtk";
   };
 
-
-
-  services.dbus = {
-  	implementation = "broker";
-	packages = with pkgs; [gcr];
-  };
 
   # Polkit
   security.polkit.enable = true;

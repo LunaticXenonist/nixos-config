@@ -47,6 +47,8 @@
 			../modules/gaming
 			../modules/home-manager
 			../modules/display/hypr
+			../modules/theming
+			../modules/programs
 			];
 		};
 	};

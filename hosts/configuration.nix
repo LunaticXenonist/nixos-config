@@ -16,6 +16,7 @@
 	networkmanager.enable = true;
   };
 
+  programs.dconf.enable = true;
 
   # Package Manager configuration
   nix = {
@@ -63,7 +64,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
 	discord
-	firefox
     ];
   };
 
@@ -99,8 +99,8 @@
   # Desktop Portals
   xdg.portal = {
   	enable = true;
-	extraPortals = with pkgs; [xdg-desktop-portal-gtk];
-	config.common.default = "gtk";
+	extraPortals = with pkgs; [xdg-desktop-portal-kde];
+	config.common.default = "kde";
   };
 
 

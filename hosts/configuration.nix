@@ -63,7 +63,7 @@
     description = "Cole Gibbs";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-	discord
+	vesktop
     ];
   };
 

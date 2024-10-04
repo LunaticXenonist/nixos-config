@@ -46,7 +46,7 @@
 			modules = [
 			../modules/gaming
 			../modules/home-manager
-			../modules/display/hypr
+			../modules/display/sway
 			../modules/theming
 			../modules/programs
 			];

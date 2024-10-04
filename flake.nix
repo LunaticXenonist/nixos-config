@@ -9,15 +9,6 @@
 	inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-    	url = "github:hyprwm/Hyprland/v0.39.1";
-	inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    hyprnix =  {
-    	url = "github:hyprland-community/hyprnix";
-	inputs.nixpkgs.follows = "nixpkgs";
-    };
 
   };
 

@@ -2,7 +2,7 @@
 	imports = [
 		./waybar/home.nix
 		./wofi/home.nix
-		./hyprland/config.nix
+		./sway/home.nix
 		./mako/home.nix
 	];
 
@@ -13,7 +13,7 @@
 	];
 	
 	programs.waybar.settings.main = {
-		modules-left = ["hyprland/workspaces"];
-		modules-center = ["hyprland/window"];
+		modules-left = ["sway/workspaces"];
+		modules-center = ["sway/window"];
 	};
 }

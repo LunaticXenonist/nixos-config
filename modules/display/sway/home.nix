@@ -2,7 +2,6 @@
 	imports = [
 		./waybar/home.nix
 		./wofi/home.nix
-		./sway/home.nix
 		./mako/home.nix
 	];
 

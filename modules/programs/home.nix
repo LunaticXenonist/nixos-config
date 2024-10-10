@@ -4,5 +4,6 @@
 		./firefox/home.nix
 		./grapejuice/home.nix
 		./heroic/home.nix
+		./prismlauncher/home.nix
 	];
 }

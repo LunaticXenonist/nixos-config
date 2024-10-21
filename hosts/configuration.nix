@@ -64,6 +64,8 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
 	vesktop
+	discord
+	kdePackages.dolphin
     ];
   };
 
@@ -73,6 +75,8 @@
      		git
      		wget
      		curl
+		killall
+		gparted
   	];
 	variables = {
 		EDITOR = "nvim";
@@ -99,7 +103,7 @@
   # Desktop Portals
   xdg.portal = {
   	enable = true;
-	extraPortals = with pkgs; [xdg-desktop-portal-kde];
+	extraPortals = with pkgs; [xdg-desktop-portal-kde xdg-desktop-portal-gtk];
 	config.common.default = "kde";
   };
 
@@ -114,12 +118,12 @@
   security.polkit.enable = true;
   systemd =  {
   	user.services.polkit-gnome-authentication-agent-1 = {
-		description = "polkit-gnome-authentication-agent";
+		description = "polkit-gnome-authentication-agent-1";
 		wants = ["graphical-session.target"];
 		wantedBy = ["graphical-session.target"];
 		after = ["graphical-session.target"];
 		serviceConfig = {
-			type = "simple";
+			Type = "simple";
 			ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
 			Restart = "on-failure";
 			RestartSec = 1;

@@ -8,7 +8,7 @@
 
 			modules-right = [ "pulseaudio" "cpu" "memory" "clock" "tray"];
 
-			modules-left = ["sway/workspaces"];
+			modules-left = ["sway/workspaces" "hyprland/workspaces"];
 			modules-center = ["sway/window" "hyprland/window"];
 
 			clock = {

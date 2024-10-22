@@ -8,6 +8,9 @@
 
 			modules-right = [ "pulseaudio" "cpu" "memory" "clock" "tray"];
 
+			modules-left = ["sway/workspaces"];
+			modules-center = ["sway/window" "hyprland/window"];
+
 			clock = {
 				tooltip-format = "<big>{:%Y %B} </big>\n<tt><small>{calendar}</small></tt>";
 				format = "{:%I %M %p}";

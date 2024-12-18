@@ -5,5 +5,6 @@
 		./grapejuice/home.nix
 		./heroic/home.nix
 		./prismlauncher/home.nix
+		./bottles/home.nix
 	];
 }

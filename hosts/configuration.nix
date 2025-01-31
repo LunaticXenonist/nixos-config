@@ -64,9 +64,8 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
 	vesktop
-	discord
-	kdePackages.dolphin
-    ];
+	nautilus
+	];
   };
 
   environment = {
@@ -81,6 +80,11 @@
 	variables = {
 		EDITOR = "nvim";
 		VISUAL = "nvim";
+	};
+	sessionVariables = {
+		XDG_CURRENT_DESKTOP = "Hyprland";
+		XDG_SESSION_TYPE = "wayland";
+		XDG_SESSUIB_DESKOP = "Hyprland";
 	};
   };
 
@@ -103,8 +107,8 @@
   # Desktop Portals
   xdg.portal = {
   	enable = true;
-	extraPortals = with pkgs; [xdg-desktop-portal-kde xdg-desktop-portal-gtk];
-	config.common.default = "kde";
+	extraPortals = with pkgs; [xdg-desktop-portal-gtk];
+	config.common.default = "gtk";
   };
 
 

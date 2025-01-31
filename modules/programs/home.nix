@@ -6,5 +6,6 @@
 		./heroic/home.nix
 		./prismlauncher/home.nix
 		./bottles/home.nix
+		./sidequest/home.nix
 	];
 }

@@ -1,8 +1,9 @@
 {pkgs, ...}: {
 	wayland.windowManager.hyprland.settings = {
+		exec-once = "waybar && mako";
 		monitor = [ "DP-2, 2560x1440@164.55400, 0x0, 1"];
 		bind = [
-		"SUPER, r, exec, wofi --show=drun"
+		"SUPER, r, exec, wofi --show=run"
 		"SUPER, q, exec, kitty"
 		"SUPER, c, killactive"
 		"SUPER, m, exit"
@@ -39,14 +40,13 @@
 		];
 		decoration = {
 			rounding = 10;
-			rounding_power = 2;
 		};
 		general = {
 			gaps_in = 5;
 			gaps_out = 20;
 			border_size = 2;
-			col.inactiveborder = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-			col.inactive_border = "rgba(595959aa)";
+			"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+			"col.inactive_border" = "rgba(595959aa)";
 		};
 	};
 }

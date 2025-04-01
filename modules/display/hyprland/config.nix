@@ -30,6 +30,7 @@
 		"SUPER SHIFT, 0, movetoworkspace, 10"
 		"SUPER, mouse_down, workspace, e+1"
 		"SUPER, mouse_up, workspace, e-1"
+		"ALT, space, exec, makoctl dismiss -a"
 		];
 		bindm = [
 		"SUPER, mouse:272, movewindow"

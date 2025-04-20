@@ -93,6 +93,9 @@
   services.udisks2.enable = true;
 
 
+  # Switch pro controller kernel module
+  boot.kernelModules = ["hid-nintendo"];
+
   # Audio
   security.rtkit.enable = true;
   services.pipewire = {

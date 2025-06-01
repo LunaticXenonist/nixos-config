@@ -10,6 +10,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # kernel
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+
   networking = {
   	hostName = "nixos";
   	#wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -94,7 +97,7 @@
 
 
   # Switch pro controller kernel module
-  boot.kernelModules = ["hid-nintendo"];
+   boot.kernelModules = ["hid-nintendo"];
 
   # Audio
   security.rtkit.enable = true;

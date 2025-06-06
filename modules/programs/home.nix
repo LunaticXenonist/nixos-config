@@ -6,5 +6,7 @@
 		./prismlauncher/home.nix
 		./bottles/home.nix
 		./sidequest/home.nix
+		./ffmpeg/home.nix
+		./yt-dlp/home.nix
 	];
 }

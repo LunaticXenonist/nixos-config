@@ -58,4 +58,9 @@
 		system = "x86_64-linux";
 		modules = moduleSets.personal.modules;
 	};
+	edda = mkHost {
+		host = "edda";
+		system = "x86-64-linux";
+		modules = moduleSets.personal.modules;
+	};
 }

@@ -3,5 +3,6 @@
 		./hardware-configuration.nix
 	];
 
+	hardware.brillo.enable = true;
 
 }

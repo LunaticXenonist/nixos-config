@@ -64,7 +64,7 @@
   users.users.cole = {
     isNormalUser = true;
     description = "Cole Gibbs";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "input" "video" ];
     packages = with pkgs; [
 	vesktop
 	nautilus

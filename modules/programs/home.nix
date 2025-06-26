@@ -8,5 +8,6 @@
 		./sidequest/home.nix
 		./ffmpeg/home.nix
 		./yt-dlp/home.nix
+		./kitty/home.nix
 	];
 }

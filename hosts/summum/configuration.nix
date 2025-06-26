@@ -8,7 +8,6 @@
 		enable32Bit = true;
 	};
 
-	services.fstrim.enable = true;
 
 	systemd.tmpfiles.rules = ["d /home/cole/hdd 755 ${user} users"];
 

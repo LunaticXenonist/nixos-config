@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, host, ... }:
 
 {
 
@@ -14,7 +14,7 @@
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
 
   networking = {
-  	hostName = "nixos";
+  	hostName = host;
   	#wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 	networkmanager.enable = true;
   };

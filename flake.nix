@@ -4,6 +4,9 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
+   nixos-hardware = {
+	url = "github:NixOS/nixos-hardware";
+   };
     home-manager = {
     	url = "github:nix-community/home-manager";
 	inputs.nixpkgs.follows = "nixpkgs";

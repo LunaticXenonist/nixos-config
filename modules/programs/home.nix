@@ -9,5 +9,6 @@
 		./ffmpeg/home.nix
 		./yt-dlp/home.nix
 		./kitty/home.nix
+		./git/home.nix
 	];
 }

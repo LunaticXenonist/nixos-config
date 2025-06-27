@@ -42,7 +42,7 @@
 		};
 
 	moduleSets = {
-		personal = {
+		common = {
 			modules = [
 			../modules/gaming
 			../modules/env
@@ -52,17 +52,21 @@
 			../modules/programs
 			];
 		};
+    edda = {
+      modules = [
+        ../modules/laptop/framework/13/ai300
+        ];
+    };
 	};
   in {
 	summum = mkHost {
 		host = "summum";
 		system = "x86_64-linux";
-		modules = moduleSets.personal.modules;
+		modules = moduleSets.common.modules;
 	};
 	edda = mkHost {
 		host = "edda";
 		system = "x86_64-linux";
-		modules = moduleSets.personal.modules ++ [../modules/laptop/framework/13/ai300
-		];
+		modules = moduleSets.common.modules ++ moduleSets.edda.modules;
 	};
 }

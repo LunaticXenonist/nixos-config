@@ -49,12 +49,13 @@
 			../modules/home-manager
 			../modules/display
 			../modules/theming
-			../modules/programs
+			../modules/programs/common
 			];
 		};
     edda = {
       modules = [
         ../modules/laptop/framework/13/ai300
+        ../modules/programs/edda
         ];
     };
 	};

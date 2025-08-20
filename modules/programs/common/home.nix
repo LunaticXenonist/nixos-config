@@ -11,5 +11,7 @@
 		./kitty/home.nix
 		./git/home.nix
     ./obsidian/home.nix
+    ./vscode/home.nix
+    ./hyprshot/home.nix
 	];
 }

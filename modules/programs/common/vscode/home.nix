@@ -1,3 +1,6 @@
 {pkgs, ...}: {
-  	home.packages = [pkgs.vscode];
+  	home.packages = with pkgs; [
+      vscode-fhs
+      jdk
+      ];
 }

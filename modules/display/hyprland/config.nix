@@ -32,6 +32,7 @@
 		"SUPER, mouse_up, workspace, e-1"
 		"ALT, space, exec, makoctl dismiss -a"
     "SUPER SHIFT ALT, p, exec, hyprshot -m window -m active --clipboard-only"
+    "SUPER SHIFT, p, exec, hyprland -m window -m active -o ~/Pictures/Screenshots"
 		]; 
 		bindm = [
 		"SUPER, mouse:272, movewindow"

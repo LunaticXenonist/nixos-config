@@ -1,7 +1,9 @@
 {pkgs, host, lib, ...}: {
-  imports = [./binds.nix];
+  imports = [
+    ./binds.nix
+    ./exec-once.nix
+  ];
 	wayland.windowManager.hyprland.settings = {
-		exec-once = "waybar && mako";
 		monitor = [ "DP-2, 2560x1440@164.55400, 0x0, 1"];
 		bindm = [
 		"SUPER, mouse:272, movewindow"

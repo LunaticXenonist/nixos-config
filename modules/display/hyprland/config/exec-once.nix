@@ -3,6 +3,7 @@
     exec-once = [
       "mako"
       "waybar"
+      "hyprpaper"
     ];
   };
 }

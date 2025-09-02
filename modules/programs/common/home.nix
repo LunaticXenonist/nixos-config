@@ -4,6 +4,7 @@
 		./firefox/home.nix
 		./heroic/home.nix
 		./prismlauncher/home.nix
+    ./gimp/home.nix
 		./bottles/home.nix
 		./sidequest/home.nix
 		./ffmpeg/home.nix
@@ -14,5 +15,6 @@
     ./vscode/home.nix
     ./hyprshot/home.nix
     ./bash/home.nix
+    ./robotics/home.nix
 	];
 }

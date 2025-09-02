@@ -1,4 +1,4 @@
 {pkgs, ... }: {
-	imports = [ ./config/default.nix] ;
+	imports = [ ./config/home.nix] ;
 	wayland.windowManager.hyprland.enable = true;
 }

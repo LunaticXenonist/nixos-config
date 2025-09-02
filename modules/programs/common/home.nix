@@ -13,5 +13,6 @@
     ./obsidian/home.nix
     ./vscode/home.nix
     ./hyprshot/home.nix
+    ./bash/home.nix
 	];
 }

@@ -55,6 +55,7 @@
     edda = {
       modules = [
         ../modules/laptop/framework/13/ai300
+        ../modules/laptop/common
         ../modules/programs/edda
         ];
     };

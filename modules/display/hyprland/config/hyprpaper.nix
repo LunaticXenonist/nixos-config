@@ -1,12 +1,16 @@
-{pkgs, ...} : {
+{pkgs, host, ...} : {
 
   services.hyprpaper = {
     enable = true;
-    settings = {
+    settings = 
+      let 
+        wallpaperPath = builtins.toPath ./wallpapers/${host}.jpg;
+      in
+    {
       ipc = "on";
       splash = false;
-      preload = ["~/nixos-config/modules/display/hyprland/config/wallpapers/edda.jpg"];
-      wallpaper = [", ~/nixos-config/modules/display/hyprland/config/wallpapers/edda.jpg"];
+      preload = [wallpaperPath];
+      wallpaper = [", ${wallpaperPath}"];
     };
   };
 

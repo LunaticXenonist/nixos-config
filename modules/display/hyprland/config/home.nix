@@ -3,16 +3,8 @@
     ./binds.nix
     ./exec-once.nix
     ./hyprpaper.nix
-  ];
-	wayland.windowManager.hyprland.settings =
-    let
-      monitors = {
-        summum = ["DP-2, 2560x1440@164.55400, 0x0, 1"];
-        edda = ["eDP-1, 2880x1920@120.00000, 0x0, 2"];
-      };
-    in {
-		  monitor = monitors.${host};
-
+  ] ++ lib.optional (builtins.pathExists ./hosts/${host}.nix) ./hosts/${host}.nix;
+	wayland.windowManager.hyprland.settings = {
 		bindm = [
 		"SUPER, mouse:272, movewindow"
 		"SUPER, mouse:273, resizewindow"

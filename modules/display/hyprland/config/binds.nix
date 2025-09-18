@@ -48,8 +48,13 @@
       # mako dismiss notifications
 		    "ALT, space, exec, ${commands.mako} dismiss -a"
       # take screenshots
-        "SUPER SHIFT ALT, p, exec, ${commands.hyprshot} -m window -m active --clipboard-only"
-        "SUPER SHIFT, p, exec, ${commands.hyprshot} -m window -m active -o ~/Pictures/Screenshots"
+        "SHIFT, PRINT, exec, ${commands.hyprshot} -m window -m active --clipboard-only"
+        ", PRINT, exec, ${commands.hyprshot} -m window -m active -o ~/Pictures/Screenshots"
+        "SUPER SHIFT, PRINT, exec, ${commands.hyprshot} -m output --clipboard-only" 
+        "SUPER , PRINT, exec, ${commands.hyprshot} -m output -o ~/Pictures/Screenshots"
+        "ALT SHIFT, PRINT, exec, ${commands.hyprshot} -m region --clipboard-only"
+        "ALT, PRINT, exec, ${commands.hyprshot} -m region -o ~/Pictures/Screenshots"
+
       # brightness 
         ", XF86MonBrightnessUp, exec, ${commands.brillo} -A 5 -u 10000" 
         ", XF86MonBrightnessDown, exec, ${commands.brillo} -U 5 -u 10000"

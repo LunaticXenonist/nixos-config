@@ -39,6 +39,9 @@
 
   # Set your time zone.
   time.timeZone = "America/New_York";
+  
+  # turn on bluetooth
+  hardware.bluetooth.enable = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";

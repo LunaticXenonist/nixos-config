@@ -2,9 +2,12 @@
 	imports = [
 		./r2modman/home.nix
 		./firefox/home.nix
+    ./pavucontrol/home.nix
+    ./protonvpn/home.nix
 		./heroic/home.nix
 		./prismlauncher/home.nix
     ./gimp/home.nix
+    ./blueman/home.nix
 		./bottles/home.nix
 		./sidequest/home.nix
 		./ffmpeg/home.nix

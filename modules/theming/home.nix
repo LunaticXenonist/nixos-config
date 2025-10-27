@@ -24,7 +24,7 @@
     };
     cursor = {
       name = "breeze_cursors";
-      package = pkgs.libsForQt5.breeze-qt5;
+      package = pkgs.kdePackages.breeze;
       size = 24;
     };
   };

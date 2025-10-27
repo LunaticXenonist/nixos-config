@@ -1,6 +1,6 @@
 {...}: {
 	imports = [
-		./r2modman/home.nix
+    ./r2modman/home.nix
 		./firefox/home.nix
     ./pavucontrol/home.nix
     ./protonvpn/home.nix
@@ -19,5 +19,6 @@
     ./hyprshot/home.nix
     ./bash/home.nix
     ./robotics/home.nix
+    ./piracy/home.nix
 	];
 }

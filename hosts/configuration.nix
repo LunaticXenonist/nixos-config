@@ -17,6 +17,7 @@
   	hostName = host;
   	#wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 	networkmanager.enable = true;
+  networkmanager.plugins = [pkgs.networkmanager-openconnect];  
   };
 
   programs.dconf.enable = true;

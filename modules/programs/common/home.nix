@@ -16,6 +16,7 @@
 		./git/home.nix
     ./obsidian/home.nix
     ./vscode/home.nix
+    ./java/home.nix
     ./hyprshot/home.nix
     ./bash/home.nix
     ./robotics/home.nix

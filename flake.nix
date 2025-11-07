@@ -22,6 +22,12 @@
     	url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 	inputs.nixpkgs.follows = "nixpkgs";
     };
+
+
+    frc-nix = {
+      url = "github:frc4451/frc-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 	
 
   };
@@ -35,10 +41,12 @@
 			import inputs.nixpkgs {
 			system = "x86_64-linux";
 			config.allowUnfree = true;
+      overlays = [inputs.frc-nix.overlays.default];
 		});
   	in { 
 		nixosConfigurations = import ./hosts/default.nix {
 			inherit lib user inputs sysPkgs;
     		};
+    formatter = eachSystem (system: inputs.nixpkgs.legacyPackages.${system}.alejandra);
   	};
 }

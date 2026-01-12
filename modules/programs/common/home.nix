@@ -1,6 +1,7 @@
 {...}: {
 	imports = [
     ./r2modman/home.nix
+    ./okular/home.nix
 		./firefox/home.nix
     ./pavucontrol/home.nix
     ./octave/home.nix

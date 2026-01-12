@@ -3,6 +3,8 @@
     ./r2modman/home.nix
 		./firefox/home.nix
     ./pavucontrol/home.nix
+    ./octave/home.nix
+    ./ltspice/home.nix
     ./protonvpn/home.nix
 		./epic-games/home.nix
 		./prismlauncher/home.nix

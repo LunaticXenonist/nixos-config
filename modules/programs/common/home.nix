@@ -4,7 +4,7 @@
 		./firefox/home.nix
     ./pavucontrol/home.nix
     ./protonvpn/home.nix
-		./heroic/home.nix
+		./epic-games/home.nix
 		./prismlauncher/home.nix
     ./gimp/home.nix
     ./blueman/home.nix

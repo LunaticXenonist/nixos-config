@@ -5,4 +5,5 @@
     profiles.default.extensions = with pkgs.vscode-extensions; [
       wpilibsuite.vscode-wpilib ];
     };
+  home.packages = [ pkgs.cpplint ];
 }

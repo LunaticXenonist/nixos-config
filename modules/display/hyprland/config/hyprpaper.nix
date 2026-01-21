@@ -10,6 +10,8 @@
         monitor = "";
         path = wallpaperPath;
         };
+      splash = false;
+      ipc = true;
     };
   };
 }

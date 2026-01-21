@@ -22,5 +22,9 @@
 			"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
 			"col.inactive_border" = "rgba(595959aa)";
 		};
+    misc = {
+      disable_hyprland_logo = true;
+      disable_splash_rendering = true;
+    };
 	};
 }

@@ -1,8 +1,8 @@
 {pkgs, host, lib, ...}: {
   imports = [
     ./binds.nix
-    ./exec-once.nix
     ./hyprpaper.nix
+    ./exec-once.nix
   ] ++ lib.optional (builtins.pathExists ./hosts/${host}.nix) ./hosts/${host}.nix;
 	wayland.windowManager.hyprland.settings = {
 		bindm = [

@@ -23,6 +23,8 @@
     ./hyprshot/home.nix
     ./bash/home.nix
     ./robotics/home.nix
-    ./piracy/home.nix
+    ./media/home.nix
+    ./gcc15/home.nix
+    ./thorium/home.nix
 	];
 }

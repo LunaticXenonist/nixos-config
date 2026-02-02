@@ -9,8 +9,8 @@
 		"SUPER, mouse:272, movewindow"
 		"SUPER, mouse:273, resizewindow"
 		];
-		windowrulev2 = [
-		"suppressevent maximize, class:.*"
+		windowrule = [
+		"match:class .*, suppress_event maximize"
 		];
 		decoration = {
 			rounding = 10;

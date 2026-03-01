@@ -9,6 +9,7 @@
     ./protonvpn/home.nix
 		./epic-games/home.nix
 		./prismlauncher/home.nix
+    ./logisim/home.nix
     ./gimp/home.nix
     ./blueman/home.nix
 		./bottles/home.nix

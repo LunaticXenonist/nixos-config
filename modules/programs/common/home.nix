@@ -28,5 +28,6 @@
     ./gcc15/home.nix
     ./thorium/home.nix
     ./zip/home.nix
+    ./bambu/home.nix
 	];
 }

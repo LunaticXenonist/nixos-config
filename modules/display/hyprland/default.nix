@@ -1,5 +1,7 @@
 {pkgs,...}: {
+	environment.systemPackages = [pkgs.playerctl];
 	programs.hyprland.enable = true;
+	services.playerctld.enable = true;
   services.greetd = {
     enable = true;
     settings = {

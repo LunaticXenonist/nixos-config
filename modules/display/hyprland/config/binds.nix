@@ -7,6 +7,8 @@
       mako = getExe' pkgs.mako "makoctl";
       hyprshot = getExe pkgs.hyprshot;
       kitty = getExe pkgs.kitty;
+      player = getExe' pkgs.playerctl "playerctl";
+      wireplumber = getExe pkgs.wireplumber;
     };
   in {
     wayland.windowManager.hyprland.settings = {
@@ -58,6 +60,14 @@
       # brightness 
         ", XF86MonBrightnessUp, exec, ${commands.brillo} -A 5 -u 10000" 
         ", XF86MonBrightnessDown, exec, ${commands.brillo} -U 5 -u 10000"
+
+      # media
+ 	", XF86AudioPlay, exec, ${commands.player} play-pause"
+ 	", XF86AudioNext, exec, ${commands.player} next"
+ 	", XF86AudioPrev, exec, ${commands.player} previous"
+ 	", XF86AudioMute, exec, ${commands.wireplumber} set-mute @DEFAULT_AUDIO_SING@ toggle"
+ 	", XF86AudioRaiseVolume, exec, ${commands.wireplumber} set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+ 	", XF86AudioLowerVolume, exec, ${commands.wireplumber} set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       ];
     };
   }

@@ -22,6 +22,7 @@
     ./java/home.nix
     ./hyprshot/home.nix
     ./bash/home.nix
+    ./usbmuxd/home.nix
     ./robotics/home.nix
     ./media/home.nix
     ./gcc15/home.nix

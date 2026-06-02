@@ -1,3 +1,3 @@
 {pkgs, ...} : {
-	home.packages = [pkgs.protonvpn-gui];
+	home.packages = [pkgs.proton-vpn];
 }

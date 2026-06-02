@@ -4,6 +4,7 @@
     git = {
   		enable = true;
 	  	lfs.enable = true;
+		signing.format = "openpgp";
   		settings = {
   			user = {
   				name = "Cole Gibbs";

@@ -18,10 +18,10 @@
 					libpulseaudio
 					libvorbis
 					stdenv.cc.cc.lib
-					xorg.libXcursor
-					xorg.libXi
-					xorg.libXinerama
-					xorg.libXScrnSaver
+					libxcursor
+					libxi
+					libxinerama
+					libxscrnsaver
 
 					source-sans
 					source-serif

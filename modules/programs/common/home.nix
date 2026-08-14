@@ -23,6 +23,7 @@
     ./hyprshot/home.nix
     ./bash/home.nix
     ./usbmuxd/home.nix
+    ./dotnet/home.nix
     ./robotics/home.nix
     ./media/home.nix
     ./gcc15/home.nix

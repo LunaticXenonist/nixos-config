@@ -50,6 +50,7 @@
 			../modules/display
 			../modules/theming
 			../modules/programs/common
+			../modules/appimage
 			];
 		};
     edda = {

@@ -65,7 +65,7 @@
  	", XF86AudioPlay, exec, ${commands.player} play-pause"
  	", XF86AudioNext, exec, ${commands.player} next"
  	", XF86AudioPrev, exec, ${commands.player} previous"
- 	# ", XF86AudioMute, exec, ${commands.wireplumber} set-mute @DEFAULT_AUDIO_SING@ toggle"
+ 	", XF86AudioMute, exec, ${commands.player} volume 0"
  	", XF86AudioRaiseVolume, exec, ${commands.player} volume 0.01+"
  	", XF86AudioLowerVolume, exec, ${commands.player} volume 0.01-"
       ];

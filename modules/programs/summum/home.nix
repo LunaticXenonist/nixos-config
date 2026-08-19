@@ -1,6 +1,6 @@
 {...}: {
 	imports = [
-    ./bambu/home.nix
+    # ./bambu/home.nix
     ./rpcs/home.nix
 	];
 }

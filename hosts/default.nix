@@ -60,12 +60,17 @@
         ../modules/programs/edda
         ];
     };
+    summum = {
+      modules = [
+        ../modules/programs/summum
+      ];
+    };
 	};
   in {
 	summum = mkHost {
 		host = "summum";
 		system = "x86_64-linux";
-		modules = moduleSets.common.modules;
+		modules = moduleSets.common.modules ++ moduleSets.summum.modules;
 	};
 	edda = mkHost {
 		host = "edda";

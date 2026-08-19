@@ -7,8 +7,8 @@
       isDark = true;
     };
     gtk = {
-      name = "Materia-dark";
-      package = pkgs.materia-theme;
+      name = "Arc-dark";
+      package = pkgs.arc-theme;
 
       interface = {
         preferDark = true;

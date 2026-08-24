@@ -20,6 +20,7 @@
     ./obsidian/home.nix
     ./vscode/home.nix
     ./java/home.nix
+    ./rars/home.nix
     ./hyprshot/home.nix
     ./bash/home.nix
     ./usbmuxd/home.nix

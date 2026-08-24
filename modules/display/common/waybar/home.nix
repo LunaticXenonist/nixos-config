@@ -6,7 +6,7 @@
 			position = "top";
 			height = 30;
 
-			modules-right = [ "pulseaudio" "cpu" "memory" "clock" "tray"];
+			modules-right = [ "pulseaudio" "battery" "cpu" "memory" "clock" "tray"];
 
 			modules-left = ["sway/workspaces" "hyprland/workspaces"];
 			modules-center = ["sway/window" "hyprland/window"];

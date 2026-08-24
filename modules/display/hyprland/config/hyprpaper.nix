@@ -3,7 +3,7 @@
     enable = true;
     settings = 
       let
-        wallpaperPath = "~/nixos-config/modules/display/hyprland/config/wallpapers/${host}.jpg";
+        wallpaperPath = ./wallpapers/${host}.jpg;
       in {
       preload = [wallpaperPath];
       wallpaper = {

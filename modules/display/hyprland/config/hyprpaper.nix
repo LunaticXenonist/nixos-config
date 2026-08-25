@@ -3,7 +3,7 @@
     enable = true;
     settings = 
       let
-        wallpaperPath = ./wallpapers/${host}.jpg;
+        wallpaperPath = "${./wallpapers/${host}.jpg}";
       in {
       preload = [wallpaperPath];
       wallpaper = {

@@ -1,6 +1,7 @@
 {pkgs, host, ...} : {
   services.hyprpaper = {
     enable = true;
+    package = pkgs.hyprpaper;
     settings = 
       let
         wallpaperPath = "${./wallpapers/${host}.jpg}";
@@ -11,7 +12,7 @@
         path = wallpaperPath;
         };
       splash = false;
-      ipc = true;
+      ipc = false;
     };
   };
 }

@@ -1,5 +1,5 @@
 {pkgs, ... }: {
-	imports = [ ./config/home.nix] ;
+	imports = [ ./configlua/home.nix];
 	wayland.windowManager.hyprland.enable = true;
         xdg.userDirs.setSessionVariables = true;
 }

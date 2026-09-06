@@ -1,9 +1,10 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.mako];
-
-  xdg.configFile."mako/config".text = ''
-    layer=overlay
-  '';
+  services.mako = {
+    enable = true;
+    settings = {
+      layer = "overlay";
+    };
+  };
 }
 
 

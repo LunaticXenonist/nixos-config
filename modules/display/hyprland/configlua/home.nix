@@ -20,6 +20,7 @@
         player = getExe' pkgs.playerctl "playerctl";
         wireplumber = getExe' pkgs.wireplumber "wpctl";
         wofi = getExe pkgs.wofi;
+        hyprshutdown = getExe pkgs.hyprshutdown;
     };
     in 
       ''
@@ -31,6 +32,7 @@
         player = "${commands.player}",
         wireplumber = "${commands.wireplumber}",
         wofi = "${commands.wofi}",
+        hyprshutdown = "${commands.hyprshutdown}",
         host = "${host}"
       }
       return store

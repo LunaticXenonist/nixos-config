@@ -7,7 +7,7 @@ hl.bind("ALT + SPACE", hl.dsp.exec_cmd(store.mako.." dismiss -a"))
 
 -- misc commands
 hl.bind("SUPER + C", hl.dsp.window.close(activewindow))
-hl.bind("SUPER + M", hl.dsp.exit())
+hl.bind("SUPER + M", hl.dsp.exec_cmd(store.hyprshutdown))
 
 -- window management
 hl.bind("SUPER + F", 

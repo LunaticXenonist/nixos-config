@@ -15,6 +15,7 @@
 		./sidequest/home.nix
 		./ffmpeg/home.nix
 		./yt-dlp/home.nix
+    ./prolog/home.nix
 		./kitty/home.nix
 		./git/home.nix
     ./obsidian/home.nix

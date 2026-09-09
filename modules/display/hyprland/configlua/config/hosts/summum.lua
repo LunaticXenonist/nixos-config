@@ -18,5 +18,5 @@ hl.monitor({
 })
 
 
-hl.workspace_rule({workspace = r[1-2], monitor = "DP-2"})
-hl.workspace_rule({workspace = r[3-4], monitor = "DP-1"})
+hl.workspace_rule({workspace = "r[1-2]", monitor = "DP-2"})
+hl.workspace_rule({workspace = "r[3-4]", monitor = "DP-1"})

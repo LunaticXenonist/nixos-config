@@ -1,4 +1,5 @@
 {...}: {
 	imports = [
+	./sbctl/default.nix
 	];
 }

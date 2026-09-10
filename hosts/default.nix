@@ -64,6 +64,7 @@
     summum = {
       modules = [
         ../modules/programs/summum
+        ../modules/secure-boot
       ];
     };
 	};

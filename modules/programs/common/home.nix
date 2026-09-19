@@ -30,6 +30,7 @@
     ./media/home.nix
     ./gcc15/home.nix
     ./thorium/home.nix
+    ./woeusb/home.nix
     ./zip/home.nix
 	];
 }

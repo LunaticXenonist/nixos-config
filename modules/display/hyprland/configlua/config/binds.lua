@@ -59,10 +59,10 @@ hl.bind("XF86MonBrightnessDown",
 -- Media
 hl.bind("XF86AudioPlay", 
   hl.dsp.exec_cmd(store.player.." play-pause"))
-hl.bind("XF86AudioPlay", 
+hl.bind("XF86AudioNext", 
   hl.dsp.exec_cmd(store.player.." next"))
-hl.bind("XF86AudioPlay", 
+hl.bind("XF86AudioPrev", 
   hl.dsp.exec_cmd(store.player.." previous"))
-hl.bind("XF86AudioPlay", 
+hl.bind("XF86AudioMute", 
   hl.dsp.exec_cmd(store.player.." volume 0"))
 

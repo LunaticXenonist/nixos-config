@@ -9,5 +9,6 @@
 		copyq
 		wl-clipboard
 		wlr-randr
+		xrandr    # lets you set the primary monitor (and wlr-randr doesnt)
 	];
 }

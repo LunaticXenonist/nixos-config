@@ -66,3 +66,11 @@ hl.bind("XF86AudioPrev",
 hl.bind("XF86AudioMute", 
   hl.dsp.exec_cmd(store.player.." volume 0"))
 
+-- Volume Binds
+hl.bind("XF86AudioRaiseVolume", 
+  hl.dsp.exec_cmd(store.player.." volume 0.001+ && pkill -SIGRTMIN+5 waybar"))
+hl.bind("XF86AudioLowerVolume", 
+  hl.dsp.exec_cmd(store.player.." volume 0.001- && pkill -SIGRTMIN+5 waybar"))
+hl.bind("CTRL + XF86AudioLowerVolume", 
+  hl.dsp.exec_cmd(store.player.." volume 0 && pkill -SIGRTMIN+5 waybar"))
+

@@ -12,6 +12,12 @@ hl.window_rule({
   suppress_event = "maximize",
   })
 
+hl.window_rule({
+  name = "confine_pointer_tf2",
+  match = {class = "^(tf_linux64)$"},
+  confine_pointer = 1,
+  })
+
 hl.config({
   general = {
     border_size = 2,

@@ -1,0 +1,37 @@
+{...}: {
+	imports = [
+    ./r2modman/home.nix
+    ./okular/home.nix
+		./firefox/home.nix
+    ./pavucontrol/home.nix
+    ./octave/home.nix
+    ./ltspice/home.nix
+    ./protonvpn/home.nix
+		./epic-games/home.nix
+		./prismlauncher/home.nix
+    ./logisim/home.nix
+    ./gimp/home.nix
+    ./blueman/home.nix
+		./sidequest/home.nix
+		./ffmpeg/home.nix
+		./yt-dlp/home.nix
+    ./prolog/home.nix
+		./kitty/home.nix
+		./git/home.nix
+    ./obsidian/home.nix
+    ./vscode/home.nix
+    ./java/home.nix
+    ./rars/home.nix
+    ./hyprshot/home.nix
+    ./bash/home.nix
+    ./usbmuxd/home.nix
+    ./dotnet/home.nix
+    ./robotics/home.nix
+    ./media/home.nix
+    ./gcc15/home.nix
+    ./thorium/home.nix
+    ./woeusb/home.nix
+    ./sideloading/home.nix
+    ./zip/home.nix
+	];
+}

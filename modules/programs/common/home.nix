@@ -24,13 +24,13 @@
     ./rars/home.nix
     ./hyprshot/home.nix
     ./bash/home.nix
-    ./usbmuxd/home.nix
     ./dotnet/home.nix
     ./robotics/home.nix
     ./media/home.nix
     ./gcc15/home.nix
     ./thorium/home.nix
     ./woeusb/home.nix
+    ./sideloading/home.nix
     ./zip/home.nix
 	];
 }
